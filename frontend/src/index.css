@@ -1,0 +1,362 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap");
+
+:root {
+  font-family: "DM Sans", sans-serif;
+  color: #172033;
+  background: #f5f7fb;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-optical-sizing: auto;
+  font-weight: 400;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.65;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
+}
+
+::selection {
+  background: #dce8ff;
+  color: #1749a5;
+}
+
+/* ===== TripGuard Dashboard - FULL / PREMIUM LOOK ===== */
+.dash-full {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.dash-compact-hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  padding: 22px 26px;
+  border-radius: 16px;
+  color: #fff;
+  background: linear-gradient(115deg, #102a56, #174b91 65%, #2469b5);
+  box-shadow: 0 10px 28px rgba(16, 42, 86, 0.22);
+}
+
+.dash-compact-hero h2 {
+  margin: 8px 0 4px;
+  color: #fff;
+  font-size: 26px;
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+.dash-compact-hero p {
+  margin: 0;
+  color: #d6e5f8;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.dash-hero-actions {
+  display: flex;
+  gap: 10px;
+  flex-shrink: 0;
+  align-items: center;
+}
+
+.dash-hero-actions .dashboard-primary-link {
+  background: #fff;
+  color: #174b91;
+  padding: 10px 16px;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 13px;
+  white-space: nowrap;
+}
+
+.dash-hero-actions .dashboard-refresh {
+  background: rgba(255, 255, 255, 0.16);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  color: #fff;
+  padding: 10px 14px;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 13px;
+}
+
+.dash-grid-3 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 16px;
+}
+
+.dash-card {
+  padding: 20px;
+  border: 1px solid #e9eef5;
+  border-radius: 15px;
+  background: #fff;
+  box-shadow: 0 4px 16px rgba(25, 53, 88, 0.04);
+  min-width: 0;
+}
+
+.dash-card h3 {
+  margin: 6px 0 10px;
+  font-size: 18px;
+  font-weight: 800;
+  color: #172b49;
+}
+
+.dash-big {
+  font-size: 36px;
+  font-weight: 800;
+  color: #173c70;
+  margin: 6px 0;
+  line-height: 1;
+}
+
+.dash-muted {
+  color: #8491a4;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.dash-breakdown {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin: 14px 0;
+}
+
+.dash-break-row {
+  display: grid;
+  grid-template-columns: 70px 1fr 28px;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  color: #344a67;
+}
+
+.dash-mini-bar {
+  height: 7px;
+  background: #edf1f7;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.dash-mini-bar div {
+  height: 100%;
+  background: linear-gradient(90deg, #2465bd, #52a4ec);
+  border-radius: inherit;
+}
+
+.dash-route {
+  font-size: 14px;
+  color: #344a67;
+  margin: 0 0 6px;
+}
+
+.dash-next-meta {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  font-size: 12px;
+  color: #52607a;
+  margin-top: 8px;
+  line-height: 1.5;
+}
+
+.dash-tip {
+  margin-top: 14px;
+  padding: 12px;
+  border-radius: 10px;
+  background: #f0f6ff;
+  font-size: 12px;
+  line-height: 1.6;
+  color: #2a4a72;
+}
+
+@media (max-width: 1000px) {
+  .dash-grid-3 {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 650px) {
+  .dash-grid-3 {
+    grid-template-columns: 1fr;
+  }
+  .dash-compact-hero {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .dash-hero-actions {
+    width: 100%;
+    flex-wrap: wrap;
+  }
+}
+/* ===== STYLISH UPGRADE 🔥 ===== */
+
+/* Metric cards - glass + hover lift */
+.dashboard-metrics .dash-metric {
+  background: #fff;
+  border: 1px solid #e8eef7;
+  border-radius: 16px;
+  padding: 18px;
+  transition: all 0.25s ease;
+  position: relative;
+  overflow: hidden;
+}
+.dashboard-metrics .dash-metric::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #2465bd, #52a4ec, #7c5cff);
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+.dashboard-metrics .dash-metric:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(23, 75, 145, 0.14);
+}
+.dashboard-metrics .dash-metric:hover::before {
+  opacity: 1;
+}
+.dashboard-metrics .dash-metric h3 {
+  font-size: 28px;
+  font-weight: 800;
+  color: #102a56;
+  margin: 10px 0 2px;
+}
+
+/* Cards - soft shadow + hover */
+.dash-card {
+  transition: all 0.25s ease;
+}
+.dash-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 14px 32px rgba(23, 75, 145, 0.12);
+  border-color: #d8e4f5;
+}
+
+/* Hero - or zyada premium */
+.dash-compact-hero {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(115deg, #0b1e3f, #174b91 55%, #2a7ae4 100%);
+}
+.dash-compact-hero::after {
+  content: "✈";
+  position: absolute;
+  right: 18px;
+  top: -18px;
+  font-size: 110px;
+  opacity: 0.12;
+  transform: rotate(18deg);
+  pointer-events: none;
+}
+.dash-compact-hero h2 {
+  font-size: 28px;
+  letter-spacing: -0.3px;
+}
+.dash-compact-hero .dashboard-eyebrow {
+  background: rgba(255,255,255,0.18);
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 11px;
+  letter-spacing: 1px;
+  font-weight: 700;
+}
+
+/* Readiness big number - gradient text */
+.dash-big {
+  background: linear-gradient(90deg, #174b91, #2a7ae4);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font-size: 42px;
+}
+
+/* Progress bar - shiny */
+.readiness-progress-track {
+  height: 10px;
+  border-radius: 20px;
+  background: #edf1f7;
+  overflow: hidden;
+}
+.readiness-progress-fill {
+  background: linear-gradient(90deg, #2465bd, #52a4ec, #34d399);
+  border-radius: inherit;
+  box-shadow: 0 0 10px rgba(52, 211, 153, 0.5);
+}
+
+/* Table - stylish header */
+.dashboard-data-table thead th {
+  background: #f2f6fc;
+  color: #5a6b85;
+  font-size: 11px;
+  letter-spacing: 0.6px;
+  padding: 12px 14px;
+}
+.dashboard-data-table tbody tr {
+  transition: background 0.2s ease;
+}
+.dashboard-data-table tbody tr:hover {
+  background: #f8fbff;
+}
+
+/* Badges - pill + bold */
+.status-badge {
+  padding: 5px 11px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+}
+.status-badge.risk-low { background: #dcfce7; color: #166534; }
+.status-badge.risk-medium { background: #fef3c7; color: #92400e; }
+.status-badge.risk-high { background: #fee2e2; color: #991b1b; }
+.status-badge.upcoming { background: #dbeafe; color: #1e40af; }
+.status-badge.completed { background: #e0e7ff; color: #4338ca; }
+
+/* Quick action links - hover slide */
+.quick-action-link {
+  transition: all 0.2s ease;
+  border-radius: 12px;
+}
+.quick-action-link:hover {
+  background: #f0f6ff;
+  transform: translateX(4px);
+}
